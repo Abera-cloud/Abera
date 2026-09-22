@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Abera/static/css/main.0dac4276.css",
-    "main.js": "/Abera/static/js/main.5af9722f.js",
+    "main.css": "/Abera/static/css/main.b3923d6f.css",
+    "main.js": "/Abera/static/js/main.98c24c0b.js",
     "static/js/453.4e016335.chunk.js": "/Abera/static/js/453.4e016335.chunk.js",
-    "static/media/Abera.jpeg": "/Abera/static/media/Abera.4559a51bd8b747892308.jpeg",
+    "static/media/Abera.jpeg": "/Abera/static/media/Abera.b0feae3e7a7c22914b0e.jpeg",
     "index.html": "/Abera/index.html",
-    "main.0dac4276.css.map": "/Abera/static/css/main.0dac4276.css.map",
-    "main.5af9722f.js.map": "/Abera/static/js/main.5af9722f.js.map",
+    "main.b3923d6f.css.map": "/Abera/static/css/main.b3923d6f.css.map",
+    "main.98c24c0b.js.map": "/Abera/static/js/main.98c24c0b.js.map",
     "453.4e016335.chunk.js.map": "/Abera/static/js/453.4e016335.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dac4276.css",
-    "static/js/main.5af9722f.js"
+    "static/css/main.b3923d6f.css",
+    "static/js/main.98c24c0b.js"
   ]
 }
