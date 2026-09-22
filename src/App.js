@@ -2,15 +2,21 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
-// Import Social Media & Action Icons from react-icons
+// Import Social Media, Action, and Navigation Icons from react-icons
 import { 
   FaLinkedin, 
   FaResearchgate, 
   FaFacebook, 
   FaOrcid, 
   FaFileDownload, 
-  FaEnvelope 
+  FaEnvelope,
+  FaGraduationCap,
+  FaHome,
+  FaUser,
+  FaFlask,
+  FaBookOpen
 } from "react-icons/fa";
+import { SiResearchgate } from "react-icons/si";
 
 // Import your profile picture from the assets folder
 import profile from "./assets/Abera.jpeg";
@@ -31,7 +37,7 @@ function Home() {
       
       {/* Social & Academic Profile Links with Icons */}
       <div className="social-links">
-        <a href="https://www.linkedin.com/in/abera-abdeta-kitaba-440466141/" target="_blank" rel="noreferrer">
+        <a href="url?id=9" target="_blank" rel="noreferrer">
           <FaLinkedin className="icon" /> LinkedIn
         </a>
         <span>|</span>
@@ -163,15 +169,41 @@ function About() {
 function Research() {
   return (
     <section className="section">
-      <h2>Research</h2>
-      
-      <h3>Research Interests</h3>
-      <ul>
-        <li>Antimicrobial Resistance (AMR)</li>
-        <li>Outer Membrane Vesicles (OMVs)</li>
-        <li>Host-Pathogen Interactions</li>
-        <li>Long Non-Coding RNAs (lncRNAs)</li>
-      </ul>
+      {/* Research Interest Card Section */}
+      <div className="research-section">
+        <h2 className="section-title">Research Interest</h2>
+
+        <div className="research-card">
+          {/* Left Column: Bullet List */}
+          <div className="research-list-container">
+            <ul className="research-list">
+              <li>Antimicrobial resistance (AMR)</li>
+              <li>Outer Membrane Vesicles (OMVs)</li>
+              <li>Non-coding RNAs</li>
+              <li>Bioinformatics</li>
+              <li>Host-Pathogen Interactions</li>
+            </ul>
+          </div>
+
+          {/* Right Column: Image / Showcase */}
+          <div className="research-media-container">
+            <div className="media-frame">
+              <img
+                src={profile}
+                alt="Research Showcase"
+                className="media-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Centered Learn More Button */}
+        <div className="button-wrapper">
+          <button className="btn-learn-more">
+            Learn More &nbsp;&#187;&#187;
+          </button>
+        </div>
+      </div>
 
       <h3>Current Research</h3>
       <p>
@@ -309,7 +341,7 @@ function Contact() {
           <a href="https://www.linkedin.com/in/abera-abdeta-kitaba-440466141/" target="_blank" rel="noreferrer">
             <FaLinkedin /> LinkedIn
           </a>
-          <a href="https://orcid.org/0000-0003-2252-6049" target="_blank" rel="noreferrer">
+          <a href="url?id=7" target="_blank" rel="noreferrer">
             <FaOrcid /> ORCID
           </a>
           <a href="https://www.researchgate.net/profile/Abera-Abdeta-Kitaba" target="_blank" rel="noreferrer">
@@ -331,15 +363,15 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        {/* Navigation Bar Header */}
+        {/* Navigation Bar Header with Icons */}
         <nav className="navbar">
           <div className="nav-brand">Abera A. Kitaba</div>
           <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/research">Research</Link></li>
-            <li><Link to="/publications">Publications</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/"><FaHome /> Home</Link></li>
+            <li><Link to="/about"><FaUser /> About</Link></li>
+            <li><Link to="/research"><FaFlask /> Research</Link></li>
+            <li><Link to="/publications"><FaBookOpen /> Publications</Link></li>
+            <li><Link to="/contact"><FaEnvelope /> Contact</Link></li>
           </ul>
         </nav>
 
@@ -354,9 +386,72 @@ function App() {
           </Routes>
         </main>
 
-        {/* Page Footer */}
-        <footer className="footer">
-          <p>© {new Date().getFullYear()} Abera Abdeta Kitaba. All rights reserved.</p>
+        {/* Page Footer Section */}
+        <footer className="footer-section">
+          <div className="footer-card">
+            {/* Left Side: Newsletter & Social Icons */}
+            <div className="footer-newsletter">
+              <h3 className="newsletter-title">Join the Newsletter!</h3>
+              <form onSubmit={(e) => e.preventDefault()} className="newsletter-form">
+                <input
+                  type="email"
+                  placeholder="Enter email ..."
+                  className="newsletter-input"
+                />
+                <button type="submit" className="newsletter-btn">
+                  Subscribe
+                </button>
+              </form>
+
+              {/* Academic & Social Icons */}
+              <div className="footer-socials">
+                <a href="https://scholar.google.com" target="_blank" rel="noreferrer" className="glow-icon green">
+                  <FaGraduationCap />
+                </a>
+                <a href="https://www.researchgate.net/profile/Abera-Abdeta-Kitaba" target="_blank" rel="noreferrer" className="glow-icon yellow">
+                  <SiResearchgate />
+                </a>
+                <a href="https://orcid.org/0000-0003-2252-6049" target="_blank" rel="noreferrer" className="glow-icon red">
+                  <FaOrcid />
+                </a>
+                <a href="url?id=8" className="glow-icon white">
+                  <FaEnvelope />
+                </a>
+                <a href="https://www.linkedin.com/in/abera-abdeta-kitaba-440466141/" target="_blank" rel="noreferrer" className="glow-icon teal">
+                  <FaLinkedin />
+                </a>
+              </div>
+            </div>
+
+            {/* Middle Side: Quick Links Grid */}
+            <div className="footer-links-container">
+              <h4 className="quick-links-title">Quick Links</h4>
+              <div className="quick-links-grid">
+                <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/about">About</Link></li>
+                  <li><Link to="/research">Research</Link></li>
+                </ul>
+                <ul>
+                  <li><Link to="/publications">Publications</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Right Side: Circular Avatar */}
+            <div className="footer-avatar-container">
+              <img src={profile} alt="Abera Abdeta Kitaba" className="footer-avatar" />
+            </div>
+          </div>
+
+          {/* Copyright Line */}
+          <div className="copyright-container">
+            <h3 className="copyright-name">
+              Abera <span className="highlight-text">A. Kitaba, Ph.D. Candidate</span>
+            </h3>
+            <p>Copyright 2026 &copy; by Abera Abdeta Kitaba. All Rights Reserved.</p>
+          </div>
         </footer>
       </div>
     </Router>
