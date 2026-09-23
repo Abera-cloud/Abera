@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Abera/static/css/main.e5cfdc13.css",
-    "main.js": "/Abera/static/js/main.7170ec0b.js",
+    "main.js": "/Abera/static/js/main.bedf3b1a.js",
     "static/js/453.4e016335.chunk.js": "/Abera/static/js/453.4e016335.chunk.js",
-    "static/media/Abera.jpeg": "/Abera/static/media/Abera.b0feae3e7a7c22914b0e.jpeg",
+    "static/media/Abera.jpeg": "/Abera/static/media/Abera.8f13a69aff01f81fe2dc.jpeg",
     "index.html": "/Abera/index.html",
     "main.e5cfdc13.css.map": "/Abera/static/css/main.e5cfdc13.css.map",
-    "main.7170ec0b.js.map": "/Abera/static/js/main.7170ec0b.js.map",
+    "main.bedf3b1a.js.map": "/Abera/static/js/main.bedf3b1a.js.map",
     "453.4e016335.chunk.js.map": "/Abera/static/js/453.4e016335.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5cfdc13.css",
-    "static/js/main.7170ec0b.js"
+    "static/js/main.bedf3b1a.js"
   ]
 }
